@@ -1,0 +1,277 @@
+body{
+	background-color:black;
+}
+header{/*all nav bar*/
+	background: rgba(255,255,255,.5);
+	box-shadow: 3px 0 7px rgba(0,0,0,.3);
+	padding: 20px;
+
+	display: flex; /*seperate logo from menu*/
+	justify-content: space-between;
+	align-items: center;
+}
+.navbar-nav { /*font style*/
+	font-family: "Didot", "Arima", sans-serif;
+	font-weight: 500;
+	font-size: 25px;
+	padding: 20px;
+
+}
+/*slider properties*/
+.container {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+.slider__container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.slider__items {
+	counter-reset: slide;
+}
+
+.slider__item {
+	
+	flex: 0 0 100%;
+	max-width: 120%;
+	counter-increment: slide;
+	height: 700px;
+	position: relative;
+}
+
+	.slider__item::before {
+		content: counter(slide) "/5";
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		color: #fff;
+		font-style: italic;
+		font-size: 32px;
+		font-weight: bold;
+		display: block;
+	}
+
+/*!--Main Lots of Auction-*/
+.wrapper {
+	padding: 8em 0 6em 0;
+	position: relative;
+}
+
+	.wrapper > .inner {
+		margin: 0 auto;
+		width: 70em;
+
+	} /*inner block size*/
+
+	.wrapper.style1 {
+		background-color: #EEE;
+		color: #777;
+		
+	}
+	/*inner block color*/
+
+		.wrapper.style1 a {
+			color: #51BAA4;
+		} 
+
+		.wrapper.style1 h2 {
+			color: #555;
+		}
+
+		.wrapper.style1 code {
+			background: #fff;
+			border-color: rgba(144, 144, 144, 0.25);
+			
+		}
+
+		.wrapper.style1 hr {
+			border-bottom-color: rgba(144, 144, 144, 0.25);
+		}
+
+		.wrapper.style1 header p {
+			color: #555;
+		}
+
+		.wrapper.style1 .feature {
+			background-color: #fff;
+			box-shadow: 12px 12px 22px grey;
+		}
+
+		
+
+
+
+	/*properties for image section of inner block*/	
+
+
+	.image img {
+		border-radius: 0;
+		display: block;
+	}
+
+	.image.left, .image.right {
+		max-width: 40%;
+	}
+
+		.image.left img, .image.right img {
+			width: 100%;
+		}
+
+	.image.left {
+		float: left;
+		padding: 0 1.5em 1em 0;
+		top: 0.25em;
+	}
+/*positions of images*/
+
+	.image.right {
+		float: right;
+		padding: 0 0 1em 1.5em;
+		top: 0.25em;
+	}
+/*positions of images*/
+
+	.image.fit {
+		display: block;
+		margin: 0 0 2em 0;
+		width: 100%;
+	}
+
+     .image.fit img {
+			width: 100%;
+		}
+
+	.feature {
+	
+		display: flex;
+		align-items: center;
+		margin-bottom: 6em;
+	}
+
+		
+
+		.feature.left {
+			
+			flex-direction: row;
+		}
+
+		.feature.right {
+			
+			flex-direction: row-reverse;
+		}
+
+		.feature .image {
+			width: 48%;
+		}
+
+
+        .feature .image img {
+				max-width: 100%;
+			}
+
+		.feature .content {
+			padding: 2em 3em 0.1em 3em;
+			width: 52%;
+		}
+/*media queries*/
+		@media screen and (max-width: 1280px) {
+
+			.feature {
+				margin-bottom: 4em;
+			}
+
+				.feature .content {
+					padding: 1em 2em 0.1em 2em;
+				}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.feature.left, .feature.right {
+				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+			}
+
+			.feature .image {
+				width: 100%;
+			}
+
+				.feature .image img {
+					width: 100%;
+				}
+
+			.feature .content {
+				padding: 2em 2em 0.1em 2em;
+				width: 100%;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.feature {
+				margin-bottom: 2em;
+			}
+
+				.feature .content {
+					padding: 2em 1em 0.1em 1em;
+				}
+
+		}
+
+	.feature {
+		background-color: rgba(144, 144, 144, 0.075);
+	}
+
+.text {
+	color: white;
+	
+	position: absolute;
+	width: 95%;
+	top: 40%;
+	text-align: center;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+h1 {
+	text-align: center;
+	color: white;
+	font-size: 72px;
+	font-family: "Didot" "Arima", sans-serif;
+}
+h2{
+	text-align: center;
+	color: #1f0000;
+  font-size: 40px;
+  font-family: "Arima", sans-serif;
+}
+.text p {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0em;
+	margin-inline-end: 0em;
+	width: 80%;
+	padding-left: 220px;
+	position: absolute;
+	text-align: center;
+	font-size: 13px;
+	padding-bottom: 30px;
+}
+
+.space{
+	background-color:#f6f6f6;
+	height:200px;
+}
+.row {
+	letter-spacing: 2px;
+	
+}
